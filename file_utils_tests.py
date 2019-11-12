@@ -47,13 +47,13 @@ def test_get_file_content():
 def test_get_exist_file():
     file_name = os.path.join(os.path.dirname(os.path.abspath(__file__)),
                             "data",
-                            "demo.txt")
+                            "bogus.txt")
     desc = "Check the file exists or not"
-    expected = r"D:\gis4107\bogus.txt does not exist."
+    expected = r"{} ".format(file_name) + "does not exist."
     actual = fu.get_exist_file(file_name)
     print_test_results(fu.get_exist_file, desc, expected, actual)
 
-def test_write_to_file():
+
 
 def template_for_test_functions():
     desc = ""

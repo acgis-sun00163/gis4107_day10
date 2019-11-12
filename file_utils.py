@@ -18,7 +18,7 @@ def main():
 
 def get_file_content(file_name):
     with open(file_name) as in_file:
-        content =in_file.read
+        content = in_file.read()
     return content
     print content
 
@@ -28,14 +28,13 @@ def get_file_content(file_name):
 def get_exist_file(file_name):
     try:
         with open(file_name) as in_file:
-            content =in_file.read
+            content = in_file.read()
         return content
     except IOError:
         return "{} does not exist.".format(file_name)
 
 
-def write_to_file (file_name, content):
-    pass
+
 
 def func(params):
     """Function documentation:
